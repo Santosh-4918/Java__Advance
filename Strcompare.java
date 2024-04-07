@@ -2,6 +2,7 @@ public class Strcompare {
     public static void main(String[] args) {
         String s1 = "Hello";
         String s2 = new String("Hello");
+        String s3 = "Hello";
 
         if (s1 == s2)
             System.out.println("Both are same");
@@ -9,6 +10,11 @@ public class Strcompare {
             System.out.println("Not same");
 
         if (s1.equals(s2))
+            System.out.println("Both are same");
+        else
+            System.out.println("Not same");
+
+        if (s1 == s3)
             System.out.println("Both are same");
         else
             System.out.println("Not same");
