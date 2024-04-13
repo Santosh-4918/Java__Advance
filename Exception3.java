@@ -22,7 +22,7 @@ class IOExcep {
 }
 
 public class Exception3 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         IOExcep s = new IOExcep();
         s.accept();
         s.display();
