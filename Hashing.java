@@ -29,5 +29,12 @@ public class Hashing {
             System.out.println(e.getValue());
         }
 
+        // Iteration (2)
+        Set<String> keys = map.keySet();
+        for (String key : keys) {
+            System.out.println(key + " " + map.get(key));
+
+        }
+
     }
 }
