@@ -13,6 +13,10 @@ public class HashSt {
         // View the HashSet
         System.out.println("Hast Set =" + hs);
 
+        if (hs.contains("Arti")) {
+            System.out.println("it Contains: Arti");
+        }
+
         // Add an Iterator to hs
         Iterator<String> it = hs.iterator();
 
