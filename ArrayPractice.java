@@ -15,13 +15,22 @@ public class ArrayPractice {
         //     System.out.println(numbers[i]);
         // }
 
-        int largest=-1;
+        int largest=Integer.MIN_VALUE;
         int secondLargest=Integer.MIN_VALUE;
-        //only for Largest number
+        int third = Integer.MIN_VALUE;
+        // only for Largest number
         // for (int i = 0; i < numbers.length; i++) {
         //     if (numbers[i]>largest) {
                 
         //         largest=numbers[i];
+        //     }}
+        //     for (int i = 0; i < numbers.length; i++) {
+        //     if (numbers[i] < largest && numbers[i] > secondLargest ) {
+        //         secondLargest = numbers[i];
+        //     }}
+        //     for (int i = 0; i < numbers.length; i++) {
+        //      if (numbers[i] < secondLargest && numbers[i] > third ) {
+        //         third = numbers[i];
         //     }
         // }
         // System.out.println("Largest no is : "+largest);
@@ -36,23 +45,22 @@ public class ArrayPractice {
         //     }
         // }
 
-      // its for both largest and Second Largest
+    //   its for both largest and Second Largest
         for (int num : numbers) {
             if (num > largest) {
+                third = secondLargest;
                 secondLargest = largest; // Update second largest
                 largest = num; // Update largest
-            } else if (num > secondLargest && num != largest) {
+            } else if (num > secondLargest && num < largest) {
+                third = secondLargest;
                 secondLargest = num; // Update second largest
             }
+            else  if (num>third && num <secondLargest)
+            third = secondLargest;
         }
         System.out.println("Largest no is : "+largest);
-       
-
-        if (secondLargest == Integer.MIN_VALUE) {
-            System.out.println("No second largest number found.");
-        } else {
-            System.out.println("Second largest number is: " + secondLargest);
-        }
+        System.out.println("Second largest number is: " + secondLargest);
+        System.out.println("Third Largest no is : "+third);
 
     }
     
