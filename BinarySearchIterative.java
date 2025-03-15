@@ -8,8 +8,6 @@ public class BinarySearchIterative {
             System.out.println("Element is not Present");
         }else
            System.out.println("Element is present at index : "+result);
-
-
     }
 
     public static int binarySearch(int arr[],int x){
@@ -19,14 +17,12 @@ public class BinarySearchIterative {
             int mid = low + (high-low)/2;
             if(arr[mid]== x)
              return mid;
-
+             
             if(arr[mid]>x)
             high=mid-1;
 
             else
             low=mid+1;
-
-
         }
         return -1;
     }
