@@ -4,7 +4,7 @@ import java.util.List;
 
 public class ThreeSumLeetCode {
         public static void main(String[] args) {
-        int[] nums = {-1,0,1,2,-1,-4};
+        int[] nums = {-1,0,2,0,-1,-1,3,2,0,1};
         ThreeSumLeetCode solver = new ThreeSumLeetCode();
         List<List<Integer>> result = solver.threeSum(nums);
         for (List<Integer> triplet : result) {
